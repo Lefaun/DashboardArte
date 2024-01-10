@@ -11,8 +11,8 @@ st.set_page_config(
     layout="wide",
 )
 import pandas as pd
-df = pd.read_csv('MentalHealth.csv')
-#df = pd.read_csv('https://query.data.world/s/edvqfu4ea2ap6sbmr7ht2szxjc2mij')
+df = pd.read_csv('arte-urbana3.csv')
+df = pd.read_csv('https://query.data.world/s/edvqfu4ea2ap6sbmr7ht2szxjc2mij')
 placeholder = st.empty()
 #Title
 st.title = "Real time computer Science Dashboard 1"
@@ -20,14 +20,14 @@ st.title = "Real time computer Science Dashboard 1"
 job_filter = st.selectbox("Select the Job", pd.unique(df["Sexo"]))
 
 for seconds in range(200):
-    df["Sexo"] = df["Sexo"] * np.random.choice(range(1, 5))
-    df["Total"] = df["Total"] * np.random.choice(range(1, 5))
+    df["LON"] = df["LON"] * np.random.choice(range(1, 5))
+    df["LAT"] = df["LAT"] * np.random.choice(range(1, 5))
 
     # creating KPIs
     avg_age = np.mean(df["Total"])
 
     count_married = int(
-        df[(df["Grupo etário"] == "Grupo etário")]["Grupo etário"].count()
+        df[(df["Localizacao"] == "Localizacao")]["Localizacao"].count()
         + np.random.choice(range(1, 1000))
     )
 
