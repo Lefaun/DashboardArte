@@ -2,7 +2,7 @@ import time  # to simulate a real time data, time loop
 import pandas as pd
 import numpy as np  # np mean, np random
 import pandas as pd  # read csv, df manipulation
-import plotly.express as px  # interactive charts
+#import plotly.express as px  # interactive charts
 import streamlit as st  # data web app development
 import pandas as pd
 st.set_page_config(
