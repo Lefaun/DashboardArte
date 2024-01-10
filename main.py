@@ -12,7 +12,7 @@ st.set_page_config(
 )
 import pandas as pd
 df = pd.read_csv('arte-urbana - arte_urbana_fev2022.csv')
-df = pd.read_csv('https://query.data.world/s/edvqfu4ea2ap6sbmr7ht2szxjc2mij')
+#df = pd.read_csv('https://query.data.world/s/edvqfu4ea2ap6sbmr7ht2szxjc2mij')
 placeholder = st.empty()
 #Title
 st.title = "Real time computer Science Dashboard 1"
@@ -20,8 +20,8 @@ st.title = "Real time computer Science Dashboard 1"
 job_filter = st.selectbox("Select the Job", pd.unique(df["Descricao"]))
 
 for seconds in range(200):
-    df["LON"] = df["LON"] * np.random.choice(range(1, 5))
-    df["LAT"] = df["LAT"] * np.random.choice(range(1, 5))
+    df["lon"] = df["LON"] * np.random.choice(range(1, 5))
+    df["lat"] = df["LAT"] * np.random.choice(range(1, 5))
 
     # creating KPIs
     avg_age = np.mean(df["Total"])
@@ -31,7 +31,7 @@ for seconds in range(200):
         + np.random.choice(range(1, 1000))
     )
 
-    balance = np.mean(df["Total"])
+    balance = np.mean(df["Data"])
 
     with placeholder.container():
         # create three columns
