@@ -19,9 +19,9 @@ st.title = "Real time computer Science Dashboard 1"
 
 job_filter = st.selectbox("Select the Job", pd.unique(df["Descricao"]))
 
-for seconds in range(200):
-    df["total"] = df["Total"] * np.random.choice(range(1, 5))
-    df["Localizacao"] = df["Localizacao"] * np.random.choice(range(1, 5))
+#for seconds in range(200):
+  #  df["total"] = df["Total"] * np.random.choice(range(1, 5))
+  #  df["Localizacao"] = df["Localizacao"] * np.random.choice(range(1, 5))
 
     # creating KPIs
     avg_age = np.mean(df["Total"])
