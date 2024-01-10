@@ -1,4 +1,4 @@
-import time  # to simulate a real time data, time loop
+riimport time  # to simulate a real time data, time loop
 import pandas as pd
 import numpy as np  # np mean, np random
 import pandas as pd  # read csv, df manipulation
@@ -17,7 +17,7 @@ placeholder = st.empty()
 #Title
 st.title = "Real time computer Science Dashboard 1"
 
-job_filter = st.selectbox("Select the Job", pd.unique(df["Sexo"]))
+job_filter = st.selectbox("Select the Job", pd.unique(df["Descricao"]))
 
 for seconds in range(200):
     df["LON"] = df["LON"] * np.random.choice(range(1, 5))
